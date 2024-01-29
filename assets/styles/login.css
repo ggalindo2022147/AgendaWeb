@@ -50,3 +50,8 @@ button {
 button:hover {
     background-color: black;
 }
+
+img {
+    width: 175px;
+    padding: 25px;
+}
