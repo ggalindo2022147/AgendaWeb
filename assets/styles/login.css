@@ -11,10 +11,11 @@ body {
 
 .formato-login {
     background-color: #fff;
-    padding: 20px;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px; 
+    width: 90%; 
+    max-width: 200px;
     text-align: center;
 }
 
@@ -52,6 +53,6 @@ button:hover {
 }
 
 img {
-    width: 175px;
-    padding: 25px;
+    max-width: 50%;
+    height: auto;
 }
