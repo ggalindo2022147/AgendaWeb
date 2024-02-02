@@ -10,12 +10,12 @@
     <header>
         <h1>Contactos</h1>
         <nav>
-            <ul>
-                <li><a href="../pages/contactos.html">Contacto</a></li>
-                <li><a href="../pages/agregarContacto.html">Agregar Contacto</a></li>
-                <li><a href="../pages/favoritos.html">Favoritos</a></li>
-                <li><a href="../pages/todolist.html">To Do List</a></li>
-                <li id="menu-trigger">
+            <ul class="ull">
+                <li class="lii"><a href="../pages/contactos.html">Contacto</a></li>
+                <li class="lii"><a href="../pages/agregarContacto.html">Agregar Contacto</a></li>
+                <li class="lii"><a href="../pages/favoritos.html">Favoritos</a></li>
+                <li class="lii"><a href="../pages/todolist.html">To Do List</a></li>
+                <li class="lii" id="menu-trigger">
                     <a href="#">
                         <img src="../resource/img/user.png" alt="Menú">
                     </a>
@@ -32,8 +32,21 @@
     <div class="container">
         <h1>To Do List</h1>
         <div class="search">
-            <form>
+            <form id="addForm">
                 <input type="text" placeholder="Agregar tarea">
+                <label>
+                    <input type="checkbox" name="prioridad" id="altoCheckbox" value="alto">
+                    Alto
+                </label>
+                <label>
+                    <input type="checkbox" name="prioridad" id="bajoCheckbox" value="Baja">
+                    Baja
+                </label>
+                <button class="btn-add">+</button>
+            </form>
+            
+            <form class="hide" id="editForm">
+                <input type="text" placeholder="Editar">
                 <label>
                     <input type="checkbox" name="prioridad" value="alto">
                     Alto
@@ -42,8 +55,9 @@
                     <input type="checkbox" name="prioridad" value="Baja">
                     Baja
                 </label>
-                <button class="btn-add">+</button>
+                <button type="submit" class="btn-update">✔</button>
             </form>
+
         </div>
         <div class="li-container">
             <ul>
@@ -54,5 +68,6 @@
             <p>Sin tareas pendientes</p>
         </div>
     </div>
+    <script src="../scripts/todolist.js"></script>
 </body>
 </html>

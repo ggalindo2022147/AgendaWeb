@@ -5,10 +5,11 @@ body {
 }
 
 header {
-    background-color: #3498db; 
+    background-color: #3498db;
     color: #fff;
     text-align: center;
     padding: 10px;
+    max-width: 100%;
 }
 
 header nav {
@@ -17,21 +18,21 @@ header nav {
     align-items: center;
 }
 
-header nav ul {
+header nav .ull {
     display: flex;
     list-style: none;
     font-size: 18px;
 }
 
-header nav ul li {
+header nav .ull .lii {
     margin-right: 20px;
 }
 
-header nav ul li a {
+header nav .ull .lii a {
     text-decoration: none;
 }
 
-header nav ul li a:hover {
+header nav .ull .lii a:hover {
     background-color: aliceblue;
     border-radius: 15px;
 }
@@ -49,7 +50,7 @@ header nav ul li a:hover {
 #menu-dropdown {
     display: none;
     position: absolute;
-    top: 40px; 
+    top: 40px;
     background-color: #3498db;
     padding: 10px;
     border-radius: 4px;
@@ -60,41 +61,28 @@ header nav ul li a:hover {
     display: block;
 }
 
-h1, h2, h3, p, ul, li, form {
+.hide {
+    display: none !important;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form {
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 370px;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-dropdown {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    top: 40px;
-    right: 0;
-}
-
-.menu-trigger:hover .menu-dropdown {
-    display: block;
-}
-
-/* Estilos para la sección de tareas */
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
 }
 
 .search {
@@ -138,32 +126,161 @@ button.btn-add:hover {
 }
 
 .li-container {
-    margin-bottom: 20px;
+    background-color: white;
+    width: 100%;
+    color: darkslategray;
+    margin-top: 20px;
 }
 
-ul {
+.li-container ul {
+    padding: 0;
+}
+
+.li-container li {
     list-style: none;
+    background-color: lightgray;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+}
+
+.li-container li p {
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+}
+
+.btn-delete {
+    margin-left: auto;
+    border: none;
+    background-color: #e31746;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 10%;
+    font-size: 1.2em;
+}
+
+.btnEdit {
+    margin-left: auto;
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 10%;
+    font-size: 1.2em;
+}
+
+.btn-add {
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    font-family: fantasy;
+    background-color: teal;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.btn-add:hover {
+    cursor: pointer;
+    background-color: darkcyan;
+}
+
+.btn-update {
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    font-family: fantasy;
+    background-color: #4CAF50;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.btn-update:hover {
+    cursor: pointer;
+    background-color: #45a049;
+}
+
+.btnEdit {
+    background-color: #45a049;
+    border: none;
 }
 
 .empty {
-    text-align: center;
+    color: darkslategrey;
 }
 
-
-
 @media screen and (max-width: 768px) {
-    header nav ul {
+    header nav .ull {
         flex-direction: column;
         align-items: center;
     }
 
-    header nav ul li {
+    header nav .ull .lii {
         margin-right: 0;
         margin-bottom: 10px;
     }
 
-    .contacto {
-        width: 90%; 
-        margin: 0 auto; 
+    .search form input[type="text"] {
+        flex: 100%;
+        margin-right: 0;
+    }
+
+    .search form label {
+        flex: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    button.btn-add,
+    button.btn-update {
+        flex: 100%;
+        margin-top: 10px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .li-container li p {
+        padding: 10px;
+    }
+
+    .search form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search form input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .search form label {
+        display: flex;
+        align-items: center;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    button.btn-add,
+    button.btn-update {
+        width: 100%;
+        margin-top: 10px;
     }
 }
