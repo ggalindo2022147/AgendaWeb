@@ -87,8 +87,8 @@ main {
     }
 
     .contacto {
-        width: 90%; /* Ajustar el ancho para pantallas más pequeñas */
-        margin: 0 auto; /* Centrar el contenedor */
+        width: 90%; 
+        margin: 0 auto; 
     }
 }
 
